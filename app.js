@@ -3,12 +3,12 @@ function encriptar() {
     let container_text = document.getElementById("container__text__copy");
     let image = document.getElementById("img__main");
 
-    let textCrifrado = text
-        .replace(/a/gi, "alt")
-        .replace(/e/gi, "err")
-        .replace(/i/gi, "inst")
-        .replace(/o/gi, "lol")
-        .replace(/u/gi, "usma");
+    let textCrifrado = minusText(text)
+        .replace(/a/gi, "ai")
+        .replace(/e/gi, "enter")
+        .replace(/i/gi, "imes")
+        .replace(/o/gi, "ober")
+        .replace(/u/gi, "ufat");
 
     if (text.length != 0) {
         container_text.textContent = textCrifrado;
@@ -28,11 +28,11 @@ function desencriptar() {
     let image = document.getElementById("img__main");
 
     let textCrifrado = text
-        .replace(/alt/gi, "a")
-        .replace(/err/gi, "e")
-        .replace(/inst/gi, "i")
-        .replace(/lol/gi, "o")
-        .replace(/usma/gi, "u");
+        .replace(/ai/gi, "a")
+        .replace(/enter/gi, "e")
+        .replace(/imes/gi, "i")
+        .replace(/ober/gi, "o")
+        .replace(/ufat/gi, "u");
 
     if (text.length != 0) {
         container_text.textContent = textCrifrado;
@@ -45,6 +45,11 @@ function desencriptar() {
         document.getElementById("danger__text").innerHTML = "Debes ingresar algun texto";
         document.getElementById("text_hidden").style.opacity = "0";
     }
+}
+
+function minusText(text){
+    textMinus = text.toLowerCase();
+    return textMinus
 }
 
 function copiar() {
